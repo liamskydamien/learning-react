@@ -1,12 +1,16 @@
 import './ExpenseItem.css';
 
 function ExpenseItem(){
+    const expenseDate = new Date(2022,11,29);
+    const expenseName = 'Online-Course';
+    const expenseCost = 50.45;
+
     return (
         <div className="expense-item">
-            <div>November 29th 2022</div>
+            <div>{expenseDate}</div>
             <div className="expense-item__description">
-                <h2>Course</h2>
-                <div className="expense-item__price">50$</div>
+                <h2>{expenseName}</h2>
+                <div className="expense-item__price">{expenseCost}</div>
             </div>
         </div>
     )
