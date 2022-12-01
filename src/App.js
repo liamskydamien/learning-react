@@ -1,5 +1,6 @@
 import ExpenseItem from "./components/ExpenseItem";
 import IncomeItem from "./components/IncomeItem";
+import ExpensesAndIncome from "./components/ExpensesAndIncome";
 function App() {
     const expenses = [
         {
@@ -28,30 +29,9 @@ function App() {
   return (
     <div>
         <h2>Hello World!</h2>
-        <ExpenseItem name={expenses[0].title}
-                     date = {expenses[0].date}
-                     cost = {expenses[0].amount}>
-        </ExpenseItem>
-        <ExpenseItem name={expenses[1].title}
-                     date = {expenses[1].date}
-                     cost = {expenses[1].amount}>
-
-        </ExpenseItem>
-        <ExpenseItem name={expenses[2].title}
-                     date = {expenses[2].date}
-                     cost = {expenses[2].amount}>
-
-        </ExpenseItem>
-        <IncomeItem
-            name="Salary"
-            date={new Date(2021,1,3)}
-            amount = '2500'>
-        </IncomeItem>
-        <ExpenseItem name={expenses[3].title}
-                     date = {expenses[3].date}
-                     cost = {expenses[3].amount}>
-
-        </ExpenseItem>
+        <ExpensesAndIncome
+            expenses={expenses}
+        ></ExpensesAndIncome>
     </div>
   );
 }
