@@ -1,4 +1,3 @@
-import React, {useState} from "react";
 import './ExpenseItem.css';
 import DateComponent from "./DateComponent";
 import ItemCard from "./UI/ItemCard";
