@@ -13,24 +13,7 @@ function ExpensesAndIncome(props){
     };
     return <Card className="expensesAndIncome">
         <ExpenseFilter selected={filteredYear} onFilterChange={filterChangeHandler}></ExpenseFilter>
-        <ExpenseItem name={props.expenses[0].title}
-                     date = {props.expenses[0].date}
-                     cost = {props.expenses[0].amount}>
-        </ExpenseItem>
-        <ExpenseItem name={props.expenses[1].title}
-                     date = {props.expenses[1].date}
-                     cost = {props.expenses[1].amount}>
-
-        </ExpenseItem>
-        <ExpenseItem name={props.expenses[2].title}
-                     date = {props.expenses[2].date}
-                     cost = {props.expenses[2].amount}>
-
-        </ExpenseItem>
-        <ExpenseItem name={props.expenses[3].title}
-                     date = {props.expenses[3].date}
-                     cost = {props.expenses[3].amount}>
-        </ExpenseItem>
+        {props.expenses.map((expense) => (<ExpenseItem name={expense.title} date={expense.date} cost={expense.amount}></ExpenseItem>))}
     </Card>;
 }
 export default ExpensesAndIncome;
