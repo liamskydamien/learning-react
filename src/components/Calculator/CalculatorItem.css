@@ -1,0 +1,16 @@
+.calculatorItem {
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    text-align: center;
+    width: 12rem;
+    height: 6rem;
+}
+
+.calculatorItem__title{
+    color: #1f1f1f;
+}
+
+.calculatorItem__price{
+    color: gray;
+}
