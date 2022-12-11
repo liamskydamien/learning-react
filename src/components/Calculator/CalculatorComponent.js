@@ -4,7 +4,7 @@ import CalculatorItem from "./CalculatorItem";
 function CalculatorComponent(props) {
     const budget = props.income.reduce((acc, cur) => acc + cur.amount, 0);
     const expenses = props.expenses.reduce((acc, cur) => acc + cur.amount, 0);
-    const balance = budget - expenses;
+    const balance = Math.round((budget + expenses)*100) / 100;
     return(
         <div className="calculator">
             <CalculatorItem title={'Budget'} value={budget} color={'61C213FF'}></CalculatorItem>
